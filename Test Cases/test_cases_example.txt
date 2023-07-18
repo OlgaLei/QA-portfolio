@@ -1,0 +1,7 @@
+Title:
+User should navigate back to the Cart by clicking the "Edit Cart" link
+Steps:
+Given User is on Checkout Page
+When User clicks on "Edit Cart" link
+Expected result:
+Then the Cart Page display
