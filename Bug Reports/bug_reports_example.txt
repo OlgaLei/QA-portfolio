@@ -1,0 +1,66 @@
+Example 1
+Title:
+[Checkout Page] It's possible to complete payment with INVALID Credit Card info (number, expiration date, zip code CVC)
+Steps to reproduce:
+1. Add any item to the Cart
+2. Go to the Checkout Page
+3. Enter valid info for the following fields: Cardholder Name, Card Number, Email, Street, City, State, Postal Code
+4. Left the following fields empty: Expiration Date,CVC, Zip Code
+5. Click Confirm Order button
+Expected result:
+-Error message in red color  "Please fill in the form" appears
+-The payment should NOT be completed
+Actual result:
+-The payment completed successfully with invalid credit card info
+-This issue is related to all fields: Card number, CVC, Expiration Date, Zip Code
+Priority:
+Critical
+
+Example 2
+Title:
+[Payment form] It's possible to complete the payment with empty email field
+Steps to reproduce:
+1. Go to Checkout Page
+2. Fill out Payment Form
+3. Leave Email field empty
+4. Click on Confirm Payment button
+Expected result:
+-Error message in red color  "Please fill in the form" appears
+-The payment should NOT be completed
+Actual result:
+The payment completed successfully with some empty required fields
+Priority:
+High
+
+Example 3
+Title:
+[Payment form] It's possible to complete the payment with empty Cardholder Name field
+Steps to reproduce:
+1. Go to Checkout Page
+2. Fill out Payment Form
+3. Leave Cardholder Name  field empty
+4. Click on Confirm Payment button
+Expected result:
+-Error message in red color  "Please fill in the form" appears
+-The payment should NOT be completed
+Actual result:
+The payment completed successfully with some empty required fields
+Priority:
+Critical
+
+Example 4
+Title:
+[Promo Code] The Promo Code field should NOT be case sensitive
+Steps to reproduce:
+1. Add any item eligible for Promo Code(not from For Sale and New Arrivals)
+2. Go to Checkout
+3. Note the Total Price
+4. Enter promo code '25off" (lowercase!)
+5. Click on Apply button
+Expected result:
+-Message "Discount applied" appears
+-The discount should apply to the order
+Actual result:
+Error message "This promo code is not valid" appears
+Priority:
+High
