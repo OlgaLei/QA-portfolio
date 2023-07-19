@@ -1,3 +1,4 @@
+Example 1
 Title:
 User should navigate back to the Cart by clicking the "Edit Cart" link
 Steps:
@@ -5,3 +6,36 @@ Given User is on Checkout Page
 When User clicks on "Edit Cart" link
 Expected result:
 Then the Cart Page display
+
+Example 2
+Title:
+Error message  should be appear if at least one required field is empty. 
+Steps:
+Given User is on Checkout Page
+When User  fills out all the fields 
+And leaves at least one empty (Cardholder Name, Card Number, Email, Street, City, State, Postal Code)
+And clicks Confirm Order button
+Expected result:
+Then the error message in  red  color display “Please fill in the form”
+
+Example 3
+Title:
+Invalid Credit Card info should be colored red
+Steps:
+Given User is on Checkout Page
+When User fills in Card Information
+And enters invalid info to fields (Credit Card number, Expiration Date,CVV)
+And clicks Confirm button
+Expected result:
+Then text in Card Information fields should be colored in red 
+
+Example 4
+Title:
+User should  see the final price after applied discount and with taxes
+Steps:
+Given User in on Checkout Page
+When User enters Promo Code from Home Page
+And clicks Apply button
+And observe Total Price field
+Expected result:
+Then Total Price after discount and with taxes should display
